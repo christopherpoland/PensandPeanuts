@@ -1,0 +1,33 @@
+header {
+  text-align: center;
+  background-color: red;
+  padding: 1em;
+}
+#headerTitle {
+  margin: 0;
+  color: black;
+}
+#headerLink {
+  text-decoration: none;
+}
+#headerDescription {
+  margin: 0;
+}
+
+#navbar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: blue;
+}
+#navbar a {
+  color: yellow;
+  text-decoration: none;
+}
+.nav-option {
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+}
+.nav-option:hover {
+  background-color: green;
+}

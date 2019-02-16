@@ -9,9 +9,9 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="styles/headernavbar.css" rel="stylesheet" type="text/css">
-    <link href="styles/main.css" rel="stylesheet" type="text/css">
-    <link href="styles/previews.css" rel="stylesheet" type="text/css">
+    <link href="../styles/headernavbar.css" rel="stylesheet" type="text/css">
+    <link href="../styles/contentpages.css" rel="stylesheet" type="text/css">
+    <link href="../styles/previews.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,50 +21,55 @@
   </head>
   <body>
     <header>
-      <a id = "headerLink" href = "index.html"><h1 id = "headerTitle">Pens and Peanuts</h1></a>
+      <a href = "../index.html" id = "headerLink"><h1 id = "headerTitle">Pens and Peanuts</h1></a>
       <p id = "headerDescription">Est. 1821</p>
     </header>
     <div id = "navbar">
-        <a href = "pageoptions/pens.html" class = "nav-option">Pens</a>
-        <a href = "pageoptions/pages.html" class = "nav-option">Pages</a>
-        <a href = "pageoptions/people.html" class = "nav-option">People</a>
-        <a href = "pageoptions/places.html" class = "nav-option">Places</a>
-        <a href = "pageoptions/peanuts.html" class = "nav-option">Peanuts</a>
+      <a href = "../pageoptions/pens.html" class = "nav-option">Pens</a>
+      <a href = "../pageoptions/pages.html" class = "nav-option">Pages</a>
+      <a href = "../pageoptions/people.html" class = "nav-option">People</a>
+      <a href = "../pageoptions/places.html" class = "nav-option">Places</a>
+      <a href = "../pageoptions/peanuts.html" class = "nav-option">Peanuts</a>
     </div>
     <div id = "main">
-      <div id = "aboutBlog">
-        <h2 id = "aboutBlogHeader">Pens&Peanuts</h2>
-        <p id = "blogDescription">I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam</p>
-      </div>
-      <div id = "previewWrapper">
-        <h2 id = "previewWrapperTitle">Latest Content</h2>
+      <p id = "sectionBlurb">I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam</p>
+      <div id = "contentWrapper">
         <div class = "preview-box">
-          <img class = "preview-photo" src="images/jeff.png">
+          <img class = "preview-photo" src="../images/jeff.png">
           <div class = "preview-text-wrapper">
             <div class = "preview-title">Colombia</div>
             <div class = "preview-text">A month in Colombia lead us to some interesting adventures...</div>
-            <div class = "read-more-wrapper">
-              <div class = "read-more">Read more in Places</div>
+            <div class = "expand-wrapper">
+              <div id = "expand">\/</div>
             </div>
           </div>
         </div>
         <div class = "preview-box">
-          <img class = "preview-photo" src="images/jeff.png">
+          <img class = "preview-photo" src="../images/jeff.png">
           <div class = "preview-text-wrapper">
             <div class = "preview-title">Mongol Rally</div>
             <div class = "preview-text">1/3 of the circumference of the Earth, London to Kyrgyzstan...1/3 of the circumference of the Earth, London to Kyrgyzstan...1/3 of the circumference of the Earth, London to Kyrgyzstan...</div>
-            <div class = "read-more-wrapper">
-              <div class = "read-more">Read more in Places</div>
+            <div class = "expand-wrapper">
+              <div id = "expand">\/</div>
             </div>
           </div>
         </div>
         <div class = "preview-box">
-          <img class = "preview-photo" src="images/hip-tribute.jpg">
+          <img class = "preview-photo" src="../images/hip-tribute.jpg">
           <div class = "preview-text-wrapper">
             <div class = "preview-title">Spain and Morocco</div>
             <div class = "preview-text">Coming Soon...</div>
-            <div class = "read-more-wrapper">
-              <div class = "read-more">Read more in Places</div>
+            <div class = "expand-wrapper">
+              <div id = "expand">\/</div>
+            </div>
+            <div class = expanded-content>
+              I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam
+              I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam
+              I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam
+              <img src="../images/jeff.png">
+              I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam
+              I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam
+              I'm da man I'm da man I'm da maAan, yes I am yes I am yes I aAam
             </div>
           </div>
         </div>
@@ -79,11 +84,10 @@
         </form>
       </div>
     </footer>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>

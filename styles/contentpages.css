@@ -1,0 +1,26 @@
+#contentWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+#sectionBlurb {
+  border: 2px solid black;
+  margin: 0;
+  padding: 0.5em;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.preview-box {
+  margin-bottom: 1em;
+}
+.expand-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.expanded-content {
+  display: none;
+}
+.hidden {
+  display: none;
+}

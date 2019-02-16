@@ -1,70 +1,45 @@
-html body {
-  margin: 0;
-  background-color: #ccc;
-}
-#headerTitle {
-  margin: 0;
-}
-#headerDescription {
-  margin: 0;
-}
-header {
-  text-align: center;
-  background-color: red;
-  padding: 1em;
-}
-#navbar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  background-color: blue;
-}
-#navbar a {
-  color: yellow;
-  text-decoration: none;
-}
-.nav-option {
-  width: 100%;
-  padding: 0.5em;
-  text-align: center;
-}
-.nav-option:hover {
-  background-color: green;
-}
 #main {
-  display: grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
   max-width: 800px;
   justify-self: center;
   margin: auto;
+  padding: 1em;
 }
 #aboutBlog {
 }
 #aboutBlogHeader {
-
+  margin: 0;
+}
+#blogDescription {
+  margin: 0;
 }
 #previewWrapper {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 30px 1fr 1fr 1fr;
   grid-row-gap: 10px;
   margin: 1em;
+}
+#previewWrapperTitle {
+  margin: 0;
 }
 .preview-box {
   display: flex;
   flex-direction: row;
-  background-color: yellow;
+  background-color: red;
   height: 25vh;
   padding-left: 1em;
-  border: 2px solid black;
+  overflow: hidden;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  overflow: hidden;
-
 }
 .preview-photo {
   height: 100%;
   width: 25vh;
   object-fit: cover;
   background-color: yellow;
+  border: 2px solid black;
+  border-right: 0;
 }
 .preview-text-wrapper {
   display: grid;
@@ -72,6 +47,10 @@ header {
   width: 100%;
   background-color: yellow;
   padding: 1em;
+  border: 2px solid black;
+  border-left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .preview-title {
   font-size: 2em;
