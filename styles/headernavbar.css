@@ -17,10 +17,10 @@ header {
 #navbar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  background-color: blue;
+  background-color: #be3;
 }
 #navbar a {
-  color: yellow;
+  color: black;
   text-decoration: none;
 }
 .nav-option {

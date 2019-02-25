@@ -1,0 +1,13 @@
+/* GENERAL */
+#peanutsNav {
+  background-color: white;
+}
+/*1. COLUMBIA */
+#columbiaWrapper {
+  flex-direction: column;
+  background-color: yellow;
+}
+#colombiaJeff {
+  height: 200px;
+  width: 200px;
+}

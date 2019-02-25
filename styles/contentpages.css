@@ -1,26 +1,96 @@
-#contentWrapper {
+#main {
   display: flex;
   flex-direction: column;
+  max-width: 800px;
+  justify-self: center;
+  margin: auto;
   padding: 1em;
+  padding-bottom: 0;
+}
+.hidden {
+  display: none;
+}
+.section-title {
+  margin: 0 0 0.5em 0;
+  color: green;
+  text-align: center;
 }
 #sectionBlurb {
   border: 2px solid black;
-  margin: 0;
+  margin-bottom: 1em;
   padding: 0.5em;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-.preview-box {
-  margin-bottom: 1em;
+#contentWrapper {
+  display: flex;
+  flex-direction: column;
 }
+.pagePreviewWrapper {
+  background-color: red;
+  margin-bottom: 1em;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.preview-box {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  height: 20vh;
+  padding-left: 1em;
+  overflow: hidden;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.preview-photo {
+  height: 100%;
+  width: 20vh;
+  object-fit: cover;
+  background-color: yellow;
+  border: 2px solid black;
+  border-right: 0;
+}
+.preview-text-wrapper {
+  display: grid;
+  grid-template-rows: 40px 2fr 20px;
+  width: 100%;
+  background-color: yellow;
+  padding: 1em;
+  border: 2px solid black;
+  border-left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.preview-title {
+  font-size: 2em;
+}
+.preview-text {
+  overflow: hidden;
+}
+.expanded-content { /*Applies to all expanded posts */
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  height: auto;
+  margin-left: 1em;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 2px solid black;
+}
+
 .expand-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.expanded-content {
-  display: none;
+
+#expand, #collapse {
+  color: red;
 }
-.hidden {
-  display: none;
+#colombiaJeff, #hipJeff, #mongolRallyJeff {
+  float: left;
+}
+#contactWrapper {
+  padding-left: 1em;
+
 }
