@@ -1,11 +1,18 @@
 /* GENERAL */
-#peanutsNav {
-  background-color: white;
+body {
+  --background: #6cb
+}
+.active-nav {
+  background-color: var(--background) !important;
+  color: black !important;
+  pointer-events: none;
+}
+.active-nav:hover {
+  background-color: var(--background) !important;
 }
 /*1. COLUMBIA */
 #columbiaWrapper {
   flex-direction: column;
-  background-color: yellow;
 }
 #colombiaJeff {
   height: 200px;

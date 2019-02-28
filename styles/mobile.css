@@ -1,18 +1,26 @@
 body {
-  --background: #6cb
+  --background: #6cb;
+  --header-height: 67px;
+}
+.hidden {
+  display: none;
+}
+.hidden-mobile {
+  display: none;
 }
 /* HEADER */
 header {
-  text-align: center;
+  display: grid;
+  grid-template-columns: auto 30px;
+  align-content: center;
+  height: top: var(--header-height);
   background-color: var(--background);
   padding: 1em;
 }
 #headerTitle {
   margin: 0;
   color: black;
-}
-#smallNav {
-  display: none;
+  text-align: center;
 }
 #headerLink {
   text-decoration: none;
@@ -21,32 +29,50 @@ header {
   margin: 0;
 }
 #navbarWrapper {
-
+  position: absolute;
+  z-index: 1001;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background-color: rgba(100, 100, 100, 0.9);
 }
 #navbar {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  background-color: black;
+  width: 40%;
+  height: calc(100vh - var(--header-height));
+  float: right;
+  background-color: white;
+  grid-template-rows: repeat(5, 40px) auto;
+  position: relative;
+  z-index: 1002;
 }
 #navbar a {
-  color: white;
+  background-color: white;
+  color: black;
   text-decoration: none;
 }
 .nav-option {
   width: 100%;
   padding: 0.5em;
-  text-align: center;
 }
-.nav-option:hover {
+#navbar a:hover {
   background-color: #888;
 }
 #funny {
-  display: none;
+  align-self: center;
+  justify-self: center;
+  height: 200px;
+  width: 100px;
+  object-fit: cover;
 }
 /* CONTENT */
 #main {
   display: flex;
+  position: absolute;
+  top: var(--header-height);
   flex-direction: column;
+  z-index: 1000;
   max-width: 800px;
   justify-self: center;
   margin: auto;
@@ -122,9 +148,12 @@ header {
 }
 .preview-title {
   font-size: 2em;
+  white-space: nowrap;
 }
 .preview-date {
   color: grey;
+  white-space: nowrap;
+  display: none;
 }
 .preview-text {
   overflow: hidden;
@@ -195,6 +224,8 @@ hr {
   float: left;
 }
 #contactWrapper {
+  position: absolute;
+  bottom: 0px;
   padding-left: 1em;
 
 }
