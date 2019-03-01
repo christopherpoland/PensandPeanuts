@@ -20,7 +20,7 @@ header {
 #headerDescription {
   margin: 0;
 }
-#navbarWrapper {
+#navbar-wrapper {
 
 }
 #navbar {
@@ -128,6 +128,7 @@ header {
 }
 .preview-text {
   overflow: hidden;
+  width: 95%;
 }
 .expanded-content { /*Applies to all expanded posts */
   display: flex;

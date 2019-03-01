@@ -76,8 +76,7 @@ header {
   max-width: 800px;
   justify-self: center;
   margin: auto;
-  padding: 1em;
-  padding-bottom: 0;
+  padding-top: 1em;
 }
 .hidden {
   display: none;
@@ -88,58 +87,57 @@ header {
   text-align: center;
 }
 #sectionBlurb {
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   margin-bottom: 1em;
   padding: 0.5em;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 #contentWrapper {
   display: flex;
   flex-direction: column;
 }
 .pagePreviewWrapper {
-  margin-bottom: 1em;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
   background-color: var(--background);
 }
 .preview-box {
   display: flex;
-  flex-direction: row;
-  background-color: black;
-  height: 20vh;
-  padding-left: 1em;
+  flex-direction: column;
+  background-color: white;
   overflow: hidden;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
-.preview-box:hover {
-  background-color: var(--background);
+.preview-photo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  /*height: 80vw; */
 }
 .preview-photo {
   height: 100%;
-  width: 20vh;
+  width: 100vw;
   object-fit: cover;
-  background-color: yellow;
-  border: 2px solid black;
-  border-right: 0;
+}
+#previewColombia {
+  object-position: 0 0; /* Use these to move the display frame of the photo if it is portrait!! **MOBILE** */
+}
+.landscape {
+  height: 100%;
+}
+.portrait {
+  height: 300px; /* Adjusts the height of a portrait photo **MOBILE** */
 }
 .preview-text-wrapper {
   display: grid;
   grid-template-rows: auto auto;
   width: 100%;
-  background-color: white;
+  height: calc(80px + 7.5vw);
   padding: 1em;
   padding-top: 0.5em;
-  border: 2px solid black;
-  border-left: 0;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 .preview-text-container {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 .title-wrapper {
   display: flex;
@@ -153,21 +151,20 @@ header {
 .preview-date {
   color: grey;
   white-space: nowrap;
-  display: none;
 }
 .preview-text {
   overflow: hidden;
+  width: 90%;
+  height: 60px;
 }
 .expanded-content { /*Applies to all expanded posts */
   display: flex;
   flex-direction: column;
   background-color: white;
   height: auto;
-  margin-left: 1em;
   padding: 1em;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border: 2px solid black;
+  padding-top: 0em;
+  border-bottom: 2px solid black;
 }
 .expanded-title {
   font-size: 2em;
@@ -180,10 +177,11 @@ header {
   grid-column-gap: 30px;
 }
 .expand-wrapper {
-  margin-top: -4.1em;
   padding-bottom: 0.5em;
-  height: 20vh;
   display: grid;
+  position: absolute;
+  top: calc(80px + 7.5vw - 90px);
+  right: 0px;
   justify-items: center;
   align-items: end;
 }
