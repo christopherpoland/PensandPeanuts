@@ -24,14 +24,24 @@
       <a href = "../index.html" id = "headerLink"><h1 id = "headerTitle">Pens and Peanuts</h1></a>
       <div id = "smallNav">~</div>
     </header>
-    <div id = "navbarWrapper" class = "hidden-mobile">
-      <div id = "navbar">
-        <a href = "../pageoptions/pens.html" class = "nav-option">Pens</a>
-        <a href = "../pageoptions/pages.html" class = "nav-option">Pages</a>
-        <a href = "../pageoptions/people.html" class = "nav-option">People</a>
-        <a href = "../pageoptions/places.html" class = "nav-option">Places</a>
-        <a href = "../pageoptions/peanuts.html" class = "nav-option active-nav">Peanuts</a>
-        <img id = "funny" src="../images/jeff.png">
+    <div id = "navbarWrapper">
+      <div id = "navbar" class = "navbar-initial">
+        <a href = "../pageoptions/pens.html" class = "nav-option" id = "pens">Pens</a>
+        <a href = "../pageoptions/pages.html" class = "nav-option" id = "pages">Pages</a>
+        <a href = "../pageoptions/people.html" class = "nav-option" id = "people">People</a>
+        <a href = "../pageoptions/places.html" class = "nav-option" id = "places">Places</a>
+        <a href = "../pageoptions/peanuts.html" class = "nav-option active-nav" id = "peanuts">Peanuts</a>
+      </div>
+      <div id = "contactMobile" class = "contact-mobile">
+        <form autocomplete="off">
+          Name:
+          <input id = "nameInput" type = "text" target = "_blank" name = "name" size = "30">
+          Email:
+          <input id = "emailInput" type = "email" name = "email" placeholder = "example@example.com" size = "30">
+          Message:
+          <textarea id = "messageInput" height = "100px" width: 100%></textarea>
+          <input type="submit">
+        </form>
       </div>
     </div>
     <div id = "main">
@@ -98,7 +108,7 @@
       <div class = "pagePreviewWrapper">
         <div class = "preview-box">
           <div class = "preview-photo-box">
-            <img class = "preview-photo " src="../images/mongol-rally.jpeg">
+            <img class = "preview-photo" id = "previewMongolRally" src="../images/mongol-rally.jpeg">
           </div>
           <div class = "preview-text-wrapper">
             <div class = "title-wrapper">
@@ -154,7 +164,7 @@
       <div class = "pagePreviewWrapper">
         <div class = "preview-box">
           <div class = "preview-photo-box">
-            <img class = "preview-photo " src="../images/hip-tribute.jpg">
+            <img class = "preview-photo" id = "previewHipTribute" src="../images/hip-tribute.jpg">
           </div>
           <div class = "preview-text-wrapper">
             <div class = "title-wrapper">

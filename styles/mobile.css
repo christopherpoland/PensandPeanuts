@@ -1,11 +1,9 @@
 body {
   --background: #6cb;
   --header-height: 67px;
+  --navbar-height: 40px;
 }
 .hidden {
-  display: none;
-}
-.hidden-mobile {
   display: none;
 }
 /* HEADER */
@@ -29,6 +27,9 @@ header {
   margin: 0;
 }
 #navbarWrapper {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
   position: absolute;
   z-index: 1001;
   top: var(--header-height);
@@ -39,13 +40,19 @@ header {
 }
 #navbar {
   display: grid;
-  width: 40%;
-  height: calc(100vh - var(--header-height));
-  float: right;
   background-color: white;
-  grid-template-rows: repeat(5, 40px) auto;
   position: relative;
   z-index: 1002;
+}
+.navbar-initial {
+  width: 40%;
+  grid-template-rows: repeat(5, var(--navbar-height));
+  justify-self: end;
+}
+.navbar-extend {
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  align-self: center;
 }
 #navbar a {
   background-color: white;
@@ -59,12 +66,32 @@ header {
 #navbar a:hover {
   background-color: #888;
 }
-#funny {
+.contact-mobile {
+  height: calc(100vh - (5 * var(--navbar-height)) - var(--header-height));
+  width: 40%;
+  background-color: white;
+  align-self: flex-end;
+}
+.contact-mobile-extended {
+  height: calc(100vh - (var(--navbar-height)) - var(--header-height));
+  width: 90%;
   align-self: center;
-  justify-self: center;
-  height: 200px;
-  width: 100px;
-  object-fit: cover;
+}
+#contactMobile form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+#nameInput, #emailInput, #messageInput {
+  width: 100%;
+}
+#messageInput {
+  height: 100%;
+}
+#nameInput:focus, #emailInput:focus, #messageInput:focus {
+  outline: 3px solid var(--background);
+  text-decoration: none;
 }
 /* CONTENT */
 #main {
@@ -117,14 +144,11 @@ header {
   width: 100vw;
   object-fit: cover;
 }
-#previewColombia {
-  object-position: 0 0; /* Use these to move the display frame of the photo if it is portrait!! **MOBILE** */
-}
 .landscape {
   height: 100%;
 }
 .portrait {
-  height: 300px; /* Adjusts the height of a portrait photo **MOBILE** */
+  height: 350px; /* Adjusts the height of a portrait photo **MOBILE** */
 }
 .preview-text-wrapper {
   display: grid;
@@ -225,5 +249,7 @@ hr {
   position: absolute;
   bottom: 0px;
   padding-left: 1em;
-
+}
+footer {
+  display: none;
 }
